@@ -1,12 +1,14 @@
 @extends('layouts.indexKepsek')
 
+<title>E-Agenda | Draf Agenda</title>
+
 @section('content')
 
 <div class="content-header">
   <div class="container-fluid">
     <div class="row mb-3">
       <div class="col-sm-6">
-        <h1 class="m-0">List Agenda Guru</h1>
+        <h1 class="m-0">Agenda Mengajar Guru</h1>
       </div>
     </div>
   </div>
@@ -45,7 +47,7 @@
                     <td class="text-center">{{ $value->kelas }}</td>
                     <td class="text-center">{{ $value->hadir }}</td>
                     <td class="text-center">Sudah Diterima</td>
-                    <td class="text-center"><a href="{{ url('cetak/'.$value->id.'/view') }}" class="btn btn-info">View</a></td>
+                    <td class="text-center"><a href="{{ url('cetak/'.$value->id.'/view') }}" class="btn btn-info ion-eye"> View</a></td>
                   </tr>
                   @endforeach
                 </tbody>

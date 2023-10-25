@@ -1,5 +1,7 @@
 @extends('layouts.indexGuru')
 
+<title>E-Agenda | Draf Agenda</title>
+
 @section('content')
 
 <div class="content-header">
@@ -98,8 +100,8 @@
         
       </div>
       <div class="form-group">
-          <a href="{{ url('draf/'.$model->id.'/edit') }}" class="btn btn-success">Edit</a>
-          <a href="{{ url('guru/draf') }}" class="btn btn-warning">Kembali</a>
+          <a href="{{ url('draf/'.$model->id.'/edit') }}" class="btn btn-success ion-edit"> Edit</a>
+          <a href="{{ url('guru/draf') }}" class="btn btn-warning ion-ios-arrow-back"> Kembali</a>
         </div>
       <!-- /.row -->
     </div>

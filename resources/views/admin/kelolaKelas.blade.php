@@ -1,5 +1,7 @@
 @extends('layouts.indexAdmin')
 
+<title>E-Agenda | Kelas</title>
+
 @section('content')
 
 <div class="content-header">
@@ -39,9 +41,9 @@
                     <td class="text-center">
                       <form method="POST" action="{{ url('kelas/'. $value->id) }}">
                       @csrf
-                      <a href="{{ url('kelas/'.$value->id.'/edit') }}" class="btn btn-success">Edit</a>
+                      <a href="{{ url('kelas/'.$value->id.'/edit') }}" class="btn btn-success ion-edit"> Edit</a>
                       <input type="hidden" name="_method" value="DELETE">
-                      <button type="submit" class="btn btn-danger">Hapus</button>
+                      <button type="submit" class="btn btn-danger ion-android-delete"> Hapus</button>
                       </form>
                     </td>
                   </tr>
@@ -53,7 +55,7 @@
           </div>
           <!-- /.card -->
           <div class="form-group">
-            <a href="{{ url('admin/kelas/tambah') }}" class="btn btn-primary">Tambah Kelas</a>
+            <a href="{{ url('admin/kelas/tambah') }}" class="btn btn-primary ion-ios-plus-outline"> Tambah Kelas</a>
           </div>
         </div>
         <!-- /.col -->

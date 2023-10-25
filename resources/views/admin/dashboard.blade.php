@@ -1,5 +1,7 @@
 @extends('layouts.indexAdmin')
 
+<title>E-Agenda | Dashboard</title>
+
 @section('content')
 
 <div class="content-header">

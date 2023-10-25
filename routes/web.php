@@ -66,6 +66,8 @@ Route::middleware(['auth'])->group(function(){
     Route::get('/admin/draf', [AdminController::class, 'draf'])->middleware('userAkses:admin');
     Route::get('/draf/{id}/view', [CetakController::class, 'show']);
 
+    Route::get('/admin/profile', [AdminController::class, 'profile'])->middleware('userAkses:admin');
+
   
     
     // // GURU
@@ -80,6 +82,9 @@ Route::middleware(['auth'])->group(function(){
 
     Route::get('/guru/cetak', [GuruController::class, 'cetak'])->middleware('userAkses:guru');
     Route::get('/cetak/{id}/view', [CetakController::class, 'show']);
+    Route::get('/guru/cetak/cetak-semua', [CetakController::class, 'cetakAgenda']);
+
+    Route::get('/guru/profile', [GuruController::class, 'profile'])->middleware('userAkses:guru');
     
 
 
@@ -91,6 +96,8 @@ Route::middleware(['auth'])->group(function(){
     //Route::patch('/draf/{id}/edit', [DrafController::class, 'update']);
 
     Route::get('/kepsek/draf', [KepsekController::class, 'draf'])->middleware('userAkses:kepalasekolah'); 
+
+    Route::get('/kepsek/profile', [KepsekController::class, 'profile'])->middleware('userAkses:kepalasekolah');
     
 
 

@@ -8,6 +8,7 @@ use App\Models\Kelas;
 use App\Models\Mapel;
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class AdminController extends Controller
 {
@@ -50,6 +51,12 @@ class AdminController extends Controller
         return view('admin.kelolaDraf', compact('tcetak'));
     }
 
+    function profile(){
+        $nidn = Auth::user()->nidn;
+        $tprofile = User::where('nidn', $nidn)->get();
+
+        return view('admin.profile', compact('tprofile'));
+    }
 
 
 

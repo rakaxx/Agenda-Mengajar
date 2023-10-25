@@ -21,4 +21,12 @@ class CetakController extends Controller
         } 
         
     }
+
+    public function cetakAgenda()
+    {
+        $nidn = Auth::user()->nidn;
+        $tcetak = Cetak::where('nidn', $nidn)->get();
+            
+        return view('guru.formCetak', compact('tcetak'));
+    }
 }

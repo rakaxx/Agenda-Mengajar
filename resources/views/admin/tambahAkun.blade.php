@@ -1,5 +1,7 @@
 @extends('layouts.indexAdmin')
 
+<title>E-Agenda | Akun</title>
+
 @section('content')
 
 <div class="content-header">
@@ -56,8 +58,8 @@
         </div>
         <!-- /.col -->
         <div class="form-group">
-          <button type="submit" class="btn btn-primary">Simpan</button>
-          <a href="{{ url('admin/akun') }}" class="btn btn-warning">Kembali</a>
+          <button type="submit" class="btn btn-primary ion-android-done"> Simpan</button>
+          <a href="{{ url('admin/akun') }}" class="btn btn-warning ion-ios-arrow-back"> Kembali</a>
         </div>
       </div>
       <!-- /.row -->

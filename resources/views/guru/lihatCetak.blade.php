@@ -1,5 +1,7 @@
 @extends('layouts.indexGuru')
 
+<title>E-Agenda | Cetak Agenda</title>
+
 @section('content')
 
 <div class="content-header">
@@ -98,7 +100,7 @@
       </div>
       <!-- /.row -->
       <div class="form-group">
-        <a href="{{ url('guru/cetak') }}" class="btn btn-warning">Kembali</a>
+        <a href="{{ url('guru/cetak') }}" class="btn btn-warning ion-ios-arrow-back"> Kembali</a>
       </div>
     </div>
     <!-- /.container-fluid -->

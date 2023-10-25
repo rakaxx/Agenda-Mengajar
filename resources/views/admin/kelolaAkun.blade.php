@@ -1,5 +1,7 @@
 @extends('layouts.indexAdmin')
 
+<title>E-Agenda | Akun</title>
+
 @section('content')
 
 <div class="content-header">
@@ -46,7 +48,7 @@
                       <form method="POST" action="{{ url('user/'. $value->id) }}">
                       @csrf
                       <input type="hidden" name="_method" value="DELETE">
-                      <button type="submit" class="btn btn-danger">Hapus</button>
+                      <button type="submit" class="btn btn-danger ion-android-delete"> Hapus</button>
                       </form>
                   </td>
                   </tr>
@@ -57,7 +59,7 @@
           </div>
           <!-- /.card -->
           <div class="form-group">
-            <a href="{{ url('admin/akun/tambah') }}" class="btn btn-primary">Tambah Akun</a>
+            <a href="{{ url('admin/akun/tambah') }}" class="btn btn-primary ion-ios-plus-outline"> Tambah Akun</a>
           </div>
         </div>
         <!-- /.col -->

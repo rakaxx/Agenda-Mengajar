@@ -1,5 +1,7 @@
 @extends('layouts.indexKepsek')
 
+<title>E-Agenda | Agenda Mengajar</title>
+
 @section('content')
 
 <div class="content-header">
@@ -98,8 +100,8 @@
         
       </div>
       <div class="form-group">
-          <button type="submit" class="btn btn-success">Terima</button>
-          <a href="{{ url('kepsek/agenda') }}" class="btn btn-warning">Kembali</a>
+          <button type="submit" class="btn btn-success ion-android-cloud-done"> Terima</button>
+          <a href="{{ url('kepsek/agenda') }}" class="btn btn-warning ion-ios-arrow-back"> Kembali</a>
         </div>
       <!-- /.row -->
     </div>

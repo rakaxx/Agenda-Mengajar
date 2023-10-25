@@ -1,5 +1,7 @@
 @extends('layouts.indexKepsek')
 
+<title>E-Agenda | Dashboard</title>
+
 @section('content')
 
 <div class="content-header">

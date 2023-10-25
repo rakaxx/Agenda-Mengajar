@@ -1,5 +1,7 @@
 @extends('layouts.indexGuru')
 
+<title>E-Agenda | Draf Agenda</title>
+
 @section('content')
 
 <div class="content-header">
@@ -98,8 +100,8 @@
         
       </div>
       <div class="form-group">
-          <button type="submit" class="btn btn-primary">Simpan</button>
-          <a href="{{ url('guru/draf') }}" class="btn btn-warning">Kembali</a>
+          <button type="submit" class="btn btn-primary io-android-done"> Simpan</button>
+          <a href="{{ url('guru/draf') }}" class="btn btn-warning ion-ios-arrow-back"> Kembali</a>
         </div>
       <!-- /.row -->
     </div>

@@ -1,5 +1,7 @@
 @extends('layouts.indexGuru')
 
+<title>E-Agenda | Draf Agenda</title>
+
 @section('content')
 
 <div class="content-header">
@@ -42,11 +44,11 @@
                     <td class="text-center">
                       <form method="POST" action="{{ url('draf/'. $value->id) }}">
                        @csrf
-                      <a href="{{ url('draf/'.$value->id.'/view') }}" class="btn btn-info">View</a>
-                      <a href="{{ url('draf/'.$value->id.'/edit') }}" class="btn btn-success">Edit</a>
+                      <a href="{{ url('draf/'.$value->id.'/view') }}" class="btn btn-info ion-eye"> View</a>
+                      <a href="{{ url('draf/'.$value->id.'/edit') }}" class="btn btn-success ion-edit"> Edit</a>
                       
                         <input type="hidden" name="_method" value="DELETE">
-                        <button type="submit" class="btn btn-danger">Hapus</button>
+                        <button type="submit" class="btn btn-danger ion-android-delete"> Hapus</button>
                     </form>
                     </td>
                   </tr>

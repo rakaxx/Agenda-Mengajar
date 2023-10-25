@@ -1,5 +1,7 @@
 @extends('layouts.indexGuru')
 
+<title>E-Agenda | Agenda Mengajar</title>
+
 @section('content')
 
 <div class="content-header">
@@ -42,7 +44,7 @@
                   <td>{{ $value->nama }}</td>
                   <td>{{ $value->mapel }}</td>
                   <td class="text-center">{{ $value->kelas }}</td>
-                  <td class="text-center"><a href="{{ url('agenda/'.$value->id.'/edit') }}" class="btn btn-primary">Isi Agenda</a></td>
+                  <td class="text-center"><a href="{{ url('agenda/'.$value->id.'/edit') }}" class="btn btn-primary nav-icon fas fa-edit"> Isi Agenda</a></td>
                 </tbody>
               </table>
             </div>
