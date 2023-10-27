@@ -1,41 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>AdminLTE 3 | Dashboard</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  @include('partials.guru.link')
-  
+    @include('partials.link')
+
 </head>
+
 <body class="hold-transition sidebar-mini layout-fixed">
-<div class="wrapper">
+    <div class="wrapper">
 
-  @include('partials.guru.preloader')
+        @include('partials.preloader')
 
-  @include('partials.guru.navbar')
- 
-  @include('partials.guru.sidebar')
+        @include('partials.guru.navbar')
 
-  <!-- Content Wrapper. Contains page content -->
-  <div class="content-wrapper">
-    
-    <!-- Main content -->
-    <section class="content">
-      <div class="container-fluid">
+        @include('partials.guru.sidebar')
 
-        @yield('content')
-        
-      </div>
-    </section>
-  </div>
+        <!-- Content Wrapper. Contains page content -->
+        <div class="content-wrapper">
 
-  @include('partials.guru.footer')
+            <!-- Main content -->
+            @yield('content')
 
-</div>
-<!-- ./wrapper -->
+            @include('partials.footer')
+            
+        </div>
 
-@include('partials.guru.script')
+    </div>
+    <!-- ./wrapper -->
+
+    @include('partials.script')
 
 </body>
+
 </html>

@@ -17,7 +17,7 @@ class KepsekController extends Controller
     }
 
     function draf(){
-        $tcetak = Cetak::all();
+        $tcetak = Cetak::paginate(10);
 
         return view('kepsek.draf', compact('tcetak'));
     }

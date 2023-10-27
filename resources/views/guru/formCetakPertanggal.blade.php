@@ -17,6 +17,7 @@
 </head>
 
 <body id="page-top">
+
     <center><img src="{{ asset('img/logo.png') }}" style="width: 10%"></center><br>
     <h3>
         <center>Laporan Agenda Mengajar</center>

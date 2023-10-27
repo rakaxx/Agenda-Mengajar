@@ -34,6 +34,10 @@ class GuruController extends Controller
         return view('guru.cetak', compact('tcetak'));
     }
 
+    function cetakPertanggal(){ 
+        return view('guru.cetakPertanggal');
+    }
+
     function profile(){
         $nidn = Auth::user()->nidn;
         $tprofile = User::where('nidn', $nidn)->get();

@@ -42,7 +42,7 @@
                     <td class="text-center">{{ $value->kelas }}</td>
                     <td class="text-center">Belum Diterima</td>
                     <td class="text-center">
-                      <form method="POST" action="{{ url('draf/'. $value->id) }}">
+                      <form method="POST" action="{{ url('draf/'. $value->id) }}" style="margin: 0; padding: 0;">
                        @csrf
                       <a href="{{ url('draf/'.$value->id.'/view') }}" class="btn btn-info ion-eye"> View</a>
                       <a href="{{ url('draf/'.$value->id.'/edit') }}" class="btn btn-success ion-edit"> Edit</a>

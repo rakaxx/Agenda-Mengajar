@@ -38,4 +38,8 @@ class MultiController extends Controller
         
         return view('kepsek.dashboard', compact('jumlah_draf', 'jumlah_cetak'));
     }
+
+    function about(){
+        return view('about');
+    }
 }

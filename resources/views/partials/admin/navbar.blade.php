@@ -24,6 +24,8 @@
           <a href="{{ url('logout') }}" class="dropdown-item">
             <i class="fas fa-door-open"></i> Logout
           </a>
+          <div class="dropdown-divider"></div>
+          <a href="{{ url('about/e-agenda') }}" target="_blank" class="dropdown-item dropdown-footer">About</a>
         </div>
       </li>
     </ul>

@@ -21,7 +21,19 @@
  <section class="content">
     <div class="container-fluid">
       <div class="row">
-        <div class="col-12">
+        <div class="col-2">
+          <div class="card card-outline">
+            <div class="card-body box-profile">
+                <div class="text-center">
+                    <img class="profile-user-img img-fluid img-circle" src="{{ asset('img/profile.jpg') }}"
+                        alt="User profile picture">
+                </div>
+            </div>
+            <!-- /.card-body -->
+        </div>
+        <!-- /.card -->
+        </div>
+        <div class="col-10">
           <div class="card">
              <!-- form start -->
               <div class="card-body">

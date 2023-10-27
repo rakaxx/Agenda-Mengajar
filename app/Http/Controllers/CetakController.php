@@ -29,4 +29,12 @@ class CetakController extends Controller
             
         return view('guru.formCetak', compact('tcetak'));
     }
+
+    public function cetakAgendaPertanggal($tanggal_awal, $tanggal_akhir)
+    {
+        $nidn = Auth::user()->nidn;
+        $tcetak = Cetak::where('nidn', $nidn)->whereBetween('tanggal', [$tanggal_awal, $tanggal_akhir])->orderBy('tanggal')->get();
+            
+        return view('guru.formCetakPertanggal', compact('tcetak'));
+    }
 }

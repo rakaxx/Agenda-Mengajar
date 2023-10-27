@@ -82,7 +82,9 @@ Route::middleware(['auth'])->group(function(){
 
     Route::get('/guru/cetak', [GuruController::class, 'cetak'])->middleware('userAkses:guru');
     Route::get('/cetak/{id}/view', [CetakController::class, 'show']);
-    Route::get('/guru/cetak/cetak-semua', [CetakController::class, 'cetakAgenda']);
+    Route::get('/guru/cetak/cetak-semua', [CetakController::class, 'cetakAgenda'])->middleware('userAkses:guru');
+    Route::get('/guru/cetak/pertanggal', [GuruController::class, 'cetakPertanggal'])->middleware('userAkses:guru');
+    Route::get('/guru/cetak/pertanggal/{tanggal_awal}/{tanggal_akhir}', [CetakController::class, 'cetakAgendaPertanggal'])->middleware('userAkses:guru');
 
     Route::get('/guru/profile', [GuruController::class, 'profile'])->middleware('userAkses:guru');
     
@@ -98,6 +100,12 @@ Route::middleware(['auth'])->group(function(){
     Route::get('/kepsek/draf', [KepsekController::class, 'draf'])->middleware('userAkses:kepalasekolah'); 
 
     Route::get('/kepsek/profile', [KepsekController::class, 'profile'])->middleware('userAkses:kepalasekolah');
+
+
+
+
+    // ABOUT
+    Route::get('/about/e-agenda', [MultiController::class, 'about']);
     
 
 
@@ -108,10 +116,6 @@ Route::middleware(['auth'])->group(function(){
     Route::resource('kelas', KelasController::class);
     Route::resource('agenda', AgendaController::class);
     Route::resource('draf', DrafController::class);
-
-    // Route::get('/formCetak', function(){
-    //     return view('guru.formCetak');
-    // });
      
 });
 

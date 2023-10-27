@@ -95,7 +95,7 @@
             </div>
             <div class="input-group flex-nowrap" style="margin-bottom: 10px">
                 <span class="input-group-text" id="addon-wrapping"><i class="bi bi-key-fill"></i></span>
-                <input type="password" class="form-control" placeholder="Password" aria-label="Password" aria-describedby="addon-wrapping" name="password" value="">
+                <input type="password" class="form-control" placeholder="Password" aria-label="Password" aria-describedby="addon-wrapping" name="password" value="12345">
             </div>
             <div class="button" style="padding-top: 10px">
                 <input class="btn btn-primary" type="submit" value="Masuk" style="padding: 5px 20px">  

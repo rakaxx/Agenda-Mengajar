@@ -1,41 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>AdminLTE 3 | Dashboard</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  @include('partials.kepsek.link')
-  
+    @include('partials.link')
+
 </head>
+
 <body class="hold-transition sidebar-mini layout-fixed">
-<div class="wrapper">
+    <div class="wrapper">
 
-  @include('partials.kepsek.preloader')
+        @include('partials.preloader')
 
-  @include('partials.kepsek.navbar')
- 
-  @include('partials.kepsek.sidebar')
+        @include('partials.kepsek.navbar')
 
-  <!-- Content Wrapper. Contains page content -->
-  <div class="content-wrapper">
+        @include('partials.kepsek.sidebar')
 
-    <!-- Main content -->
-    <section class="content">
-      <div class="container-fluid">
+        <!-- Content Wrapper. Contains page content -->
+        <div class="content-wrapper">
 
-        @yield('content')
-        
-      </div>
-    </section>
-  </div>
+            <!-- Main content -->
+            @yield('content')
 
-  @include('partials.kepsek.footer')
+            @include('partials.footer')
+            
+        </div>
 
-</div>
-<!-- ./wrapper -->
+    </div>
+    <!-- ./wrapper -->
 
-@include('partials.kepsek.script')
+    @include('partials.script')
 
 </body>
+
 </html>

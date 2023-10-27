@@ -20,21 +20,20 @@ class AdminController extends Controller
         // ->orwhere('email', 'LIKE', '%'.$keyword.'%')
         // ->paginate();
 
-        // $takun = User::paginate(3);
-
-        $tuser = User::all();
+        $tuser = User::paginate(5);
         
         return view('admin.kelolaAkun', compact('tuser'));
     }
 
     function mapel(){
-        $tmapel = Mapel::all();
+        $tmapel = Mapel::paginate(5);
         
         return view('admin.kelolaMapel', compact('tmapel'));
     }
 
     function kelas(){ 
-        $tkelas = Kelas::all();
+        $tkelas = Kelas::paginate(5);
+        // $tkelas = Kelas::all();
         
         return view('admin.kelolaKelas', compact('tkelas'));
     }
@@ -46,7 +45,7 @@ class AdminController extends Controller
     }
 
     function draf(){
-        $tcetak = Cetak::all();
+        $tcetak = Cetak::paginate(10);
 
         return view('admin.kelolaDraf', compact('tcetak'));
     }

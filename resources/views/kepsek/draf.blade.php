@@ -25,6 +25,7 @@
               <table id="example2" class="table table-bordered table-hover">
                 <thead>
                 <tr>
+                  <th class="text-center">No</th>
                   <th class="text-center">Tanggal</th>
                   <th>Waktu</th>
                   <th>Nama</th>
@@ -37,8 +38,12 @@
                 </tr>
                 </thead>
                 <tbody>
+                  @php
+                                        $no = 1;
+                                    @endphp
                   @foreach ($tcetak as $key => $value)
                   <tr>
+                    <td class="text-center">{{ $no++ }}</td>
                     <td class="text-center">{{ $value->tanggal }}</td>
                     <td>{{ $value->waktu_awal }} - {{ $value->waktu_akhir }}</td>
                     <td>{{ $value->nama }}</td>
@@ -52,6 +57,9 @@
                   @endforeach
                 </tbody>
               </table>
+              <div style="margin-top: 10px">
+                {{ $tcetak->links('vendor.pagination.bootstrap-4') }}
+            </div>
             </div>
             <!-- /.card-body -->
           </div>
