@@ -31,6 +31,7 @@ class KelasController extends Controller
     {
         $model = new Kelas;
         $model->nama = $request->nama;
+        $model->kode = $request->kode;
         $model->save();
         return redirect('admin/kelas');
     }
@@ -70,6 +71,7 @@ class KelasController extends Controller
     public function update(Request $request, $id)
     { 
         $model = Kelas::find($id);
+        $model->kode = $request->kode;
         $model->nama = $request->nama;
         $model->save();
         return redirect('admin/kelas');

@@ -30,6 +30,7 @@ class MapelController extends Controller
     public function store(Request $request)
     {
         $model = new Mapel;
+        $model->kode = $request->kode;
         $model->nama = $request->nama;
         $model->save();
         return redirect('admin/mapel');
@@ -70,6 +71,7 @@ class MapelController extends Controller
     public function update(Request $request, $id)
     {
         $model = Mapel::find($id);
+        $model->kode = $request->kode;
         $model->nama = $request->nama;
         $model->save();
         return redirect('admin/mapel');

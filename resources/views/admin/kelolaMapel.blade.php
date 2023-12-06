@@ -25,6 +25,7 @@
                                 <thead>
                                     <tr>
                                         <th class="text-center">No</th>
+                                        <th class="text-center">Kode</th>
                                         <th>Mata Pelajaran</th>
                                         <th class="text-center">Aksi</th>
                                     </tr>
@@ -36,6 +37,7 @@
                                     @foreach ($tmapel as $key => $value)
                                         <tr>
                                             <td class="text-center">{{ $no++ }}</td>
+                                            <td class="text-center">{{ $value->kode }}</td>
                                             <td>{{ $value->nama }}</td>
                                             <td class="text-center">
                                                 <form method="POST" action="{{ url('mapel/' . $value->id) }}" style="margin: 0; padding: 0;">

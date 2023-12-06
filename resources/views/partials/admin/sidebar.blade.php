@@ -62,7 +62,7 @@
           <a href="{{ url('admin/draf') }}" class="nav-link">
             <i class="nav-icon fas fa-copy"></i>
             <p>
-              Draf Agenda
+              Lihat Agenda
             </p>
           </a>
         </li>

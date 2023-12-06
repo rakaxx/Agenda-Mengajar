@@ -15,6 +15,7 @@ class CreateKelas extends Migration
     {
         Schema::create('kelas', function (Blueprint $table) {
             $table->id();
+            $table->string('kode')->unique();;
             $table->string('nama');
             $table->timestamps();
         });

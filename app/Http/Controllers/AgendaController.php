@@ -38,7 +38,9 @@ class AgendaController extends Controller
         $model->waktu_akhir = $request->waktu_akhir;
         $model->nidn = $request->nidn;
         $model->nama = $request->nama;
+        $model->kode_mapel = $request->kode_mapel;
         $model->mapel = $request->mapel;
+        $model->kode_kelas = $request->kode_kelas;
         $model->kelas = $request->kelas;
         $model->materi = $request->materi;
         $model->jumlah_siswa = $request->jumlah_siswa;
@@ -97,7 +99,9 @@ class AgendaController extends Controller
         $model->waktu_akhir = $request->waktu_akhir;
         $model->nidn = $request->nidn;
         $model->nama = $request->nama;
+        $model->kode_mapel = $request->kode_mapel;
         $model->mapel = $request->mapel;
+        $model->kode_kelas = $request->kode_kelas;
         $model->kelas = $request->kelas;
         $model->materi = $request->materi;
         $model->jumlah_siswa = $request->jumlah_siswa;
@@ -114,7 +118,9 @@ class AgendaController extends Controller
             $model->waktu_akhir = $request->waktu_akhir;
             $model->nidn = $request->nidn;
             $model->nama = $request->nama;
+            $model->kode_mapel = $request->kode_mapel;
             $model->mapel = $request->mapel;
+            $model->kode_kelas = $request->kode_kelas;
             $model->kelas = $request->kelas;
             $model->materi = $request->materi;
             $model->jumlah_siswa = $request->jumlah_siswa;

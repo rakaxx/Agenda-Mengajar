@@ -39,7 +39,7 @@
                                     <div class="form-group">
                                         <div class="row">
                                             <div class="col-sm-6">
-                                                <label>Role</label>
+                                                <label>Tanggal</label>
                                                 <input type="date" name="tanggal" class="form-control" required>
                                             </div>
                                             <div class="col-sm-3">
@@ -72,8 +72,17 @@
                                     </div>
                                     <div class="form-group">
                                         <div class="row">
-                                            <div class="col-6">
+                                            <div class="col-2">
                                                 <label>Mata Pelajaran</label>
+                                                <select class="custom-select" name="kode_mapel" required>
+                                                    <option value="">-- Kode --</option>
+                                                    @foreach ($tmapel as $key => $value)
+                                                        <option value="{{ $value->kode }}">{{ $value->kode }}</option>
+                                                    @endforeach
+                                                </select>
+                                            </div>
+                                            <div class="col-4">
+                                                <label>‎</label>
                                                 <select class="custom-select" name="mapel" required>
                                                     <option value="">-- Pilih Mapel --</option>
                                                     @foreach ($tmapel as $key => $value)
@@ -81,8 +90,17 @@
                                                     @endforeach
                                                 </select>
                                             </div>
-                                            <div class="col-6">
+                                            <div class="col-2">
                                                 <label>Kelas</label>
+                                                <select class="custom-select" name="kode_kelas" required>
+                                                    <option value="">-- Kode --</option>
+                                                    @foreach ($tkelas as $key => $value)
+                                                        <option value="{{ $value->kode }}">{{ $value->kode }}</option>
+                                                    @endforeach
+                                                </select>
+                                            </div>
+                                            <div class="col-4">
+                                                <label>‎</label>
                                                 <select class="custom-select" name="kelas" required>
                                                     <option value="">-- Pilih Kelas --</option>
                                                     @foreach ($tkelas as $key => $value)

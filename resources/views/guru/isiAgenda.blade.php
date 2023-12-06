@@ -56,41 +56,49 @@
                   </div>
                   <div class="form-group">
                     <div class="row">
-                        <div class="col-6">
-                          <label>Mata Pelajaran</label>
+                      <div class="col-2">
+                        <label>Mata Pelajaran</label>
+                        <input type="text" class="form-control" name="kode_mapel" placeholder="Masukkan Nama" value="{{ $model->kode_mapel }}" readonly>
+                      </div>
+                        <div class="col-4">
+                          <label>‎</label>
                           <input type="text" name="mapel" class="form-control" value="{{ $model->mapel }}" readonly>
                         </div>
-                        <div class="col-6">
+                        <div class="col-2">
                           <label>Kelas</label>
+                          <input type="text" class="form-control" name="kode_kelas" placeholder="Masukkan Nama" value="{{ $model->kode_kelas }}" readonly>
+                        </div>
+                        <div class="col-4">
+                          <label>‎</label>
                           <input type="text" name="kelas" class="form-control" value="{{ $model->kelas }}" readonly>
                         </div>
                     </div>
                   </div>
                   <div class="form-group">
                     <label>Materi</label>
-                    <input type="text" class="form-control" name="materi" placeholder="Masukkan Materi">
+                    <input type="text" class="form-control" name="materi" placeholder="Masukkan Materi" required>
                   </div>
                   <div class="form-group">
                     <label>Jumlah Siswa</label>
-                    <input type="text" class="form-control" name="jumlah_siswa" placeholder="Masukkan Jumlah Siswa">
+                    <input type="text" class="form-control" name="jumlah_siswa" placeholder="Masukkan Jumlah Siswa" required>
                   </div>
                   <div class="form-group">
                     <div class="row">
                         <div class="col-3">
                           <label>Siswa Hadir</label>
-                          <input type="text" class="form-control" name="hadir" placeholder="Jumlah Siswa Hadir">
+                          <input type="text" class="form-control" name="hadir" placeholder="Jumlah Siswa Hadir" required>
                         </div>
                         <div class="col-3">
                           <label>Siswa Sakit</label>
-                          <input type="text" class="form-control" name="sakit" placeholder="Jumlah Siswa Sakit">
+                          <input type="text" class="form-control" name="sakit" placeholder="Jumlah Siswa Sakit" required>
                         </div>
                         <div class="col-3">
                           <label>Siswa Izin</label>
-                          <input type="text" class="form-control" name="izin" placeholder="Jumlah Izin">
+                          <input type="text" class="form-control" name="izin" placeholder="Jumlah Izin" required>
                         </div>
                         <div class="col-3">
                           <label>Siswa Tanpa Keterangan</label>
-                          <input type="text" class="form-control" name="tanpa_ket" placeholder="Jumlah Siswa Tanpa Ket">
+                          <input type="text" class="form-control" name="tanpa_ket" placeholder="Jumlah Siswa Tanpa Ket" required>
                         </div>
                     </div>
                   </div>

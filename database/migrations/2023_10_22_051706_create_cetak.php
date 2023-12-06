@@ -20,7 +20,9 @@ class CreateCetak extends Migration
             $table->time('waktu_akhir');
             $table->string('nidn');
             $table->string('nama');
+            $table->string('kode_mapel');
             $table->string('mapel');
+            $table->string('kode_kelas');
             $table->string('kelas');
             $table->string('materi');
             $table->string('jumlah_siswa');

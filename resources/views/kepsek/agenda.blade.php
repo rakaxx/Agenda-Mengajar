@@ -7,7 +7,7 @@
         <div class="container-fluid">
             <div class="row mb-3">
                 <div class="col-sm-6">
-                    <h1 class="m-0">Persetujuan Agenda</h1>
+                    <h1 class="m-0">Tandatangan Agenda</h1>
                 </div>
             </div>
         </div>

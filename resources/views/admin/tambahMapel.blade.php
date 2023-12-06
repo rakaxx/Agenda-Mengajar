@@ -24,9 +24,17 @@
                             <!-- form start -->
                             <div class="card-body">
                                 <div class="form-group">
-                                    <label>Mata Pelajaran</label>
-                                    <input type="text" class="form-control" name="nama"
-                                        placeholder="Masukkan Nama Mata Pelajaran" required>
+                                    <div class="row">
+                                        <div class="col-sm-4">
+                                            <label>Kode</label>
+                                            <input type="text" class="form-control" name="kode" placeholder="Masukkan Kode" required>
+                                        </div>
+                                        <div class="col-sm-8">
+                                            <label>Mata Pelajaran</label>
+                                            <input type="text" class="form-control" name="nama"
+                                                placeholder="Masukkan Nama Mata Pelajaran" required>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>

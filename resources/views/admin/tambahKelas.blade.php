@@ -24,8 +24,17 @@
                             <!-- form start -->
                             <div class="card-body">
                                 <div class="form-group">
-                                    <label>Kelas</label>
-                                    <input type="text" class="form-control" name="nama" placeholder="Masukkan Kelas" required>
+                                    <div class="row">
+                                        <div class="col-sm-4">
+                                            <label>Kode</label>
+                                            <input type="text" class="form-control" name="kode" placeholder="Masukkan Kode" required>
+                                        </div>
+                                        <div class="col-sm-8">
+                                            <label>Kelas</label>
+                                            <input type="text" class="form-control" name="nama"
+                                                placeholder="Masukkan Kelas" required>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -42,4 +51,5 @@
         </section>
         <!-- /.content -->
     </form>
+    
 @endsection

@@ -28,7 +28,7 @@
           <a href="{{ url('kepsek/agenda') }}" class="nav-link">
             <i class="nav-icon fas fa-calendar-alt"></i>
             <p>
-              Persetujuan Agenda
+              Tandatangan Agenda
             </p>
           </a>
         </li>
@@ -36,7 +36,7 @@
           <a href="{{ url('kepsek/draf') }}" class="nav-link">
             <i class="nav-icon fas fa-copy"></i>
             <p>
-              Agenda Mengajar Guru
+              Lihat Agenda
             </p>
           </a>
         </li>

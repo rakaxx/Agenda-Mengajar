@@ -56,12 +56,20 @@
                   </div>
                   <div class="form-group">
                     <div class="row">
-                        <div class="col-6">
-                          <label>Mata Pelajaran</label>
+                      <div class="col-2">
+                        <label>Mata Pelajaran</label>
+                        <input type="text" class="form-control" name="kode_mapel" placeholder="Masukkan Nama" value="{{ $model->kode_mapel }}" readonly>
+                      </div>
+                        <div class="col-4">
+                          <label>‎</label>
                           <input type="text" name="mapel" class="form-control" value="{{ $model->mapel }}" readonly>
                         </div>
-                        <div class="col-6">
+                        <div class="col-2">
                           <label>Kelas</label>
+                          <input type="text" class="form-control" name="kode_kelas" placeholder="Masukkan Nama" value="{{ $model->kode_mapel }}" readonly>
+                        </div>
+                        <div class="col-4">
+                          <label>‎</label>
                           <input type="text" name="kelas" class="form-control" value="{{ $model->kelas }}" readonly>
                         </div>
                     </div>
@@ -110,3 +118,4 @@
   <!-- /.content -->
 </form>
 @endsection
+

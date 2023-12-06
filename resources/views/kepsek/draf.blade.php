@@ -8,7 +8,7 @@
   <div class="container-fluid">
     <div class="row mb-3">
       <div class="col-sm-6">
-        <h1 class="m-0">Agenda Mengajar Guru</h1>
+        <h1 class="m-0">Lihat Agenda</h1>
       </div>
     </div>
   </div>
