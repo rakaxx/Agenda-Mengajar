@@ -64,6 +64,33 @@
                     </tr>
                 @endforeach
         </table>
+        <div class="form-group">
+            <div class="row">
+                <div class="col-sm-4" style="">
+                    <center>
+                        <br><br>
+                        <h5>Mengetahui,</h5>
+                        <h5>Kepsek SMK Dharma Kusuma</h5>
+                        <br><br><br><br>
+                        <h5>Kepala Sekolah</h5>
+                        <h5>NIP: 127816375391391</h5>
+                    </center>
+                </div>
+                <div class="col-sm-4">
+
+                </div>
+                <div class="col-sm-4">
+                    <center>
+                        <br><br>
+                        <h5>Cianjur, 07 December 2023</h5>
+                        <h5>Guru Mata Pelajaran</h5>
+                        <br><br><br><br>
+                        <h5>Nama Guru</h5>
+                        <h5>NIP: 127816375391391</h5>
+                    </center>
+                </div>
+            </div>
+        </div>
     </div>
     </div>
 

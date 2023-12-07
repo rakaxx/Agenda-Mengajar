@@ -13,7 +13,7 @@
         </div>
     </div>
 
-    <form method="POST" action="{{ url('user') }}" autocomplete="off">
+    <form method="POST" action="{{ url('user') }}" enctype="multipart/form-data" autocomplete="off">
         @csrf
         <!-- Main content -->
         <section class="content">
@@ -55,6 +55,11 @@
                                         <label>Password</label>
                                         <input type="password" class="form-control" name="password"
                                             placeholder="Masukkan Nama" value="12345" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Foto</label>
+                                        <br>
+                                        <input type="file" name="foto" required>
                                     </div>
                                 </div>
                             </div>

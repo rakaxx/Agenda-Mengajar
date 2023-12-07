@@ -22,8 +22,10 @@
                     <div class="card card-outline">
                         <div class="card-body box-profile">
                             <div class="text-center">
-                                <img class="profile-user-img img-fluid img-circle" src="{{ asset('img/profile.jpg') }}"
+                                @foreach ($tprofile as $key => $value)
+                                    <img class="profile-user-img img-fluid img-circle" src="{{ asset('foto_users/'.$value->foto) }}"
                                     alt="User profile picture">
+                                @endforeach
                             </div>
 
                             <h3 class="profile-username text-center">{{ auth()->user()->nama }}</h3>

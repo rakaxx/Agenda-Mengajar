@@ -28,6 +28,7 @@
                                         <th>NIDN</th>
                                         <th>Role</th>
                                         <th>Nama</th>
+                                        <th>Foto</th>
                                         <th>Email</th>
                                         <th class="text-center">Aksi</th>
                                     </tr>
@@ -42,6 +43,7 @@
                                             <td>{{ $value->nidn }}</td>
                                             <td>{{ $value->role }}</td>
                                             <td>{{ $value->nama }}</td>
+                                            <td class="text-center"><img src="{{ asset('foto_users/'.$value->foto) }}" alt="" style="width: 40px "></td>
                                             <td>{{ $value->email }}</td>
                                             <td class="text-center">
                                                 <form method="POST" action="{{ url('user/' . $value->id) }}" style="margin: 0; padding: 0;">

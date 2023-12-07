@@ -18,6 +18,7 @@ class DummyUsersSeeder extends Seeder
             [
                 'nidn'=>'admin',
                 'nama'=>'Admin Default',
+                'foto'=>"",
                 'email'=>'admin@gmail.com',
                 'role'=>'admin',
                 'password'=> bcrypt('12345')

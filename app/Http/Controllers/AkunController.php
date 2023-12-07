@@ -33,6 +33,10 @@ class AkunController extends Controller
         $model->role = $request->role;
         $model->nidn = $request->nidn;
         $model->nama = $request->nama;
+        if($request->hasFile('foto')){
+            $request->file('foto')->move('foto_users/', $request->file('foto')->getClientOriginalName());
+            $model->foto = $request->file('foto')->getClientOriginalName();
+        }
         $model->email = $request->email;
         $model->password = $request->password;
         $model->password = bcrypt($model['password']);
