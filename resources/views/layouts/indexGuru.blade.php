@@ -32,6 +32,9 @@
     <!-- ./wrapper -->
 
     @include('partials.script')
+    @yield('script')
+    @include('sweetalert::alert')
+
 
 </body>
 

@@ -32,7 +32,13 @@
 
     @include('partials.script')
 
+<<<<<<< HEAD
     @yield('script')
+=======
+    @include('sweetalert::alert')
+
+
+>>>>>>> 63745d8c70cd44214fce2470e64a0cd6d9a649f3
 </body>
 
 </html>

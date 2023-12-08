@@ -90,7 +90,7 @@ class DrafController extends Controller
         $model->save();
 
         if (Auth::user()->role == 'guru') { 
-            return redirect('guru/draf');
+            return redirect('guru/draf')->with('toast_success', 'Agenda Berhasil Diubah');
         }elseif (Auth::user()->role == 'admin') {
             return redirect('admin/agenda');
         }elseif (Auth::user()->role == 'kepalasekolah') {
@@ -115,7 +115,7 @@ class DrafController extends Controller
             $model = Draf::find($id);
             $model->delete();
 
-            return redirect('kepsek/agenda');
+            return redirect('kepsek/agenda')->with('toast_success', 'Agenda Berhasil Ditandatangan');
         } 
     }
 
@@ -129,6 +129,6 @@ class DrafController extends Controller
     {
         $model = Draf::find($id);
         $model->delete();
-        return redirect('guru/draf');
+        return redirect('guru/draf')->with('toast_success', 'Agenda Berhasil Dihapus');
     }
 }

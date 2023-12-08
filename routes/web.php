@@ -72,6 +72,7 @@ Route::middleware(['auth'])->group(function(){
     Route::get('/get-nama-mapel/{kode}', [AdminController::class, 'get_nama_mapel']);
     Route::get('/get-kelas/{kode}', [AdminController::class, 'get_kelas']);
 
+  
     
     // // GURU
     Route::get('/guru/dashboard', [MultiController::class, 'guru'])->middleware('userAkses:guru');

@@ -43,7 +43,7 @@
                                             <td>{{ $value->nidn }}</td>
                                             <td>{{ $value->role }}</td>
                                             <td>{{ $value->nama }}</td>
-                                            <td class="text-center"><img src="{{ asset('foto_users/'.$value->foto) }}" alt="" style="width: 40px "></td>
+                                            <td class="text-center"><img src="{{ asset('storage/'.$value->foto) }}" alt="" style="width: 40px "></td>
                                             <td>{{ $value->email }}</td>
                                             <td class="text-center">
                                                 <form method="POST" action="{{ url('user/' . $value->id) }}" style="margin: 0; padding: 0;">
@@ -76,4 +76,5 @@
         <!-- /.container-fluid -->
     </section>
     <!-- /.content -->
+    
 @endsection

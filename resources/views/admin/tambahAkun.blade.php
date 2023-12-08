@@ -59,7 +59,14 @@
                                     <div class="form-group">
                                         <label>Foto</label>
                                         <br>
-                                        <input type="file" name="foto" required>
+                                            <img class="img-preview img-fluid">
+                                        <input type="file" name="foto" id="image" class="form-control 
+                                        @error('foto') is-invalid @enderror" accept="image/*">
+                                            @error('foto')
+                                                <div class="invalid-feedback">
+                                                    Tipe file harus bentuk jpg, png, jpeg.
+                                                </div>
+                                            @enderror
                                     </div>
                                 </div>
                             </div>

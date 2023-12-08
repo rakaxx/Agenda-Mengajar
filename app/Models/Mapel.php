@@ -9,4 +9,9 @@ class Mapel extends Model
 {
     use HasFactory;
     protected $table = "mapel";
+
+    protected $fillable = [
+        'kode',
+        'nama'
+    ];
 }

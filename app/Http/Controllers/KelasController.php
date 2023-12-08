@@ -33,7 +33,7 @@ class KelasController extends Controller
         $model->nama = $request->nama;
         $model->kode = $request->kode;
         $model->save();
-        return redirect('admin/kelas');
+        return redirect('admin/kelas')->with('toast_success', 'Data Berhasil Disimpan');
     }
 
     /**
@@ -74,7 +74,11 @@ class KelasController extends Controller
         $model->kode = $request->kode;
         $model->nama = $request->nama;
         $model->save();
+<<<<<<< HEAD
         return redirect('admin/kelas');
+=======
+        return redirect('admin/kelas')->with('toast_success', 'Data Berhasil Diubah');
+>>>>>>> 63745d8c70cd44214fce2470e64a0cd6d9a649f3
     }
 
     /**
@@ -87,6 +91,10 @@ class KelasController extends Controller
     {
         $model = Kelas::find($id);
         $model->delete();
+<<<<<<< HEAD
         return redirect('admin/kelas');
+=======
+        return redirect('admin/kelas')->with('toast_success', 'Data Berhasil Dihapus');
+>>>>>>> 63745d8c70cd44214fce2470e64a0cd6d9a649f3
     }
 }

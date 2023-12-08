@@ -29,6 +29,16 @@ class AkunController extends Controller
      */
     public function store(Request $request)
     {
+        $validateData = $request->validate([
+            'foto' => 'mimes:jpg,png,jpeg|image|max:2048'
+        ]);
+
+        if($request->hasFile('foto')){
+            $path = $request->file('foto')->store('uploads');
+        }else{
+            $path = '';
+        }
+
         $model = new User;
         $model->role = $request->role;
         $model->nidn = $request->nidn;
@@ -37,11 +47,12 @@ class AkunController extends Controller
             $request->file('foto')->move('foto_users/', $request->file('foto')->getClientOriginalName());
             $model->foto = $request->file('foto')->getClientOriginalName();
         }
+        $model->foto = $path;
         $model->email = $request->email;
         $model->password = $request->password;
         $model->password = bcrypt($model['password']);
         $model->save();
-        return redirect('admin/akun');
+        return redirect('admin/akun')->with('toast_success', 'Data Berhasil Disimpan');
     }
 
     /**
@@ -88,6 +99,10 @@ class AkunController extends Controller
     {
         $model = User::find($id);
         $model->delete();
+<<<<<<< HEAD
         return redirect('admin/akun');
+=======
+        return redirect('admin/akun')->with('toast_success', 'Data Berhasil Dihapus');;
+>>>>>>> 63745d8c70cd44214fce2470e64a0cd6d9a649f3
     }
 }

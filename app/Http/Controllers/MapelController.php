@@ -34,6 +34,7 @@ class MapelController extends Controller
         $model->nama = $request->nama;
         $model->save();
         return redirect('admin/mapel');
+        return redirect('admin/mapel')->with('toast_success', 'Data Berhasil Disimpan');
     }
 
     /**
@@ -74,7 +75,7 @@ class MapelController extends Controller
         $model->kode = $request->kode;
         $model->nama = $request->nama;
         $model->save();
-        return redirect('admin/mapel');
+        return redirect('admin/mapel')->with('toast_success', 'Data Berhasil Diubah');
     }
 
     /**
@@ -87,6 +88,10 @@ class MapelController extends Controller
     {
         $model = Mapel::find($id);
         $model->delete();
+<<<<<<< HEAD
         return redirect('admin/mapel');
+=======
+        return redirect('admin/mapel')->with('toast_success', 'Data Berhasil Dihapus');
+>>>>>>> 63745d8c70cd44214fce2470e64a0cd6d9a649f3
     }
 }
