@@ -72,7 +72,7 @@ class AdminController extends Controller
     }
 
     function tambahAgenda(){
-        $takun = User::all();
+        $takun = User::where('role', 'guru')->get();
         $tmapel = Mapel::all();
         $tkelas = Kelas::all();
         

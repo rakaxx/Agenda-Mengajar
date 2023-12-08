@@ -87,10 +87,6 @@
                                             <div class="col-2">
                                                 <label>Kelas</label>
                                                 <select class="custom-select" name="kode_kelas" id="kode_kelas" required>
-                                            </div>
-                                            <div class="col-2">
-                                                <label>Kelas</label>
-                                                <select class="custom-select" name="kode_kelas" required>
                                                     <option value="">-- Kode --</option>
                                                     @foreach ($tkelas as $key => $value)
                                                         <option value="{{ $value->kode }}">{{ $value->kode }}</option>
