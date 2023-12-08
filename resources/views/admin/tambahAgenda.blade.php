@@ -56,7 +56,7 @@
                                         <div class="row">
                                             <div class="col-4">
                                                 <label>NIDN</label>
-                                                <select class="custom-select" name="nidn" required>
+                                                <select class="custom-select" name="nidn" id="nidn" required>
                                                     <option value="">-- Pilih NIDN --</option>
                                                     @foreach ($takun as $key => $value)
                                                         <option value="{{ $value->nidn }}">{{ $value->nidn }}</option>
@@ -65,8 +65,7 @@
                                             </div>
                                             <div class="col-8">
                                                 <label>Nama</label>
-                                                <input type="text" class="form-control" name="nama"
-                                                    placeholder="Masukkan Nama" required>
+                                                <input type="text" class="form-control" name="nama" id="nama" readonly>
                                             </div>
                                         </div>
                                     </div>
@@ -74,7 +73,7 @@
                                         <div class="row">
                                             <div class="col-2">
                                                 <label>Mata Pelajaran</label>
-                                                <select class="custom-select" name="kode_mapel" required>
+                                                <select class="custom-select" name="kode_mapel" id="kode_mapel" required>
                                                     <option value="">-- Kode --</option>
                                                     @foreach ($tmapel as $key => $value)
                                                         <option value="{{ $value->kode }}">{{ $value->kode }}</option>
@@ -82,17 +81,12 @@
                                                 </select>
                                             </div>
                                             <div class="col-4">
-                                                <label>‎</label>
-                                                <select class="custom-select" name="mapel" required>
-                                                    <option value="">-- Pilih Mapel --</option>
-                                                    @foreach ($tmapel as $key => $value)
-                                                        <option value="{{ $value->nama }}">{{ $value->nama }}</option>
-                                                    @endforeach
-                                                </select>
+                                                <label>&nbsp;</label>
+                                                <input type="text" class="form-control" name="mapel" id="mapel" readonly/>
                                             </div>
                                             <div class="col-2">
                                                 <label>Kelas</label>
-                                                <select class="custom-select" name="kode_kelas" required>
+                                                <select class="custom-select" name="kode_kelas" id="kode_kelas" required>
                                                     <option value="">-- Kode --</option>
                                                     @foreach ($tkelas as $key => $value)
                                                         <option value="{{ $value->kode }}">{{ $value->kode }}</option>
@@ -100,13 +94,8 @@
                                                 </select>
                                             </div>
                                             <div class="col-4">
-                                                <label>‎</label>
-                                                <select class="custom-select" name="kelas" required>
-                                                    <option value="">-- Pilih Kelas --</option>
-                                                    @foreach ($tkelas as $key => $value)
-                                                        <option value="{{ $value->nama }}">{{ $value->nama }}</option>
-                                                    @endforeach
-                                                </select>
+                                                <label>&nbsp;</label>
+                                                <input type="text" class="form-control" name="kelas" id="kelas" readonly/>
                                             </div>
                                         </div>
                                     </div>
@@ -158,4 +147,73 @@
         </section>
         <!-- /.content -->
     </form>
+@endsection
+
+@section('script')
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
+<script>
+    $(document).ready(function () {
+        $('#nidn').change(function () {
+            var nidn = $(this).val();
+            
+            if (nidn !== '') {
+                $.ajax({
+                    type: 'GET',
+                    url: '/get-nama/' + nidn,
+                    success: function (data) {
+                        $('#nama').val(data.nama);
+                    },
+                    error: function (data) {
+                        console.log('Error:', data);
+                    }
+                });
+            } else {
+                $('#nama').val('');
+            }
+        });
+    });
+
+    $(document).ready(function () {
+        $('#kode_mapel').change(function () {
+            var kode = $(this).val();
+            
+            if (nidn !== '') {
+                $.ajax({
+                    type: 'GET',
+                    url: '/get-nama-mapel/' + kode,
+                    success: function (data) {
+                        $('#mapel').val(data.nama);
+                    },
+                    error: function (data) {
+                        console.log('Error:', data);
+                    }
+                });
+            } else {
+                $('#mapel').val('');
+            }
+        });
+    });
+
+    $(document).ready(function () {
+        $('#kode_kelas').change(function () {
+            var kode = $(this).val();
+            
+            if (nidn !== '') {
+                $.ajax({
+                    type: 'GET',
+                    url: '/get-kelas/' + kode,
+                    success: function (data) {
+                        $('#kelas').val(data.nama);
+                    },
+                    error: function (data) {
+                        console.log('Error:', data);
+                    }
+                });
+            } else {
+                $('#kelas').val('');
+            }
+        });
+    });
+</script>
 @endsection

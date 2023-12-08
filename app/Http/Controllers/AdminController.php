@@ -79,4 +79,21 @@ class AdminController extends Controller
         return view('admin.tambahAgenda', compact('takun', 'tmapel', 'tkelas'));
     }
 
+    function get_nama($nidn){
+        $nama = User::where('nidn', $nidn)->value('nama');
+
+        return response()->json(['nama' => $nama]);
+    }
+
+    function get_nama_mapel($kode){
+        $nama = Mapel::where('kode', $kode)->value('nama');
+
+        return response()->json(['nama' => $nama]);
+    }
+
+    function get_kelas($kode){
+        $nama = Kelas::where('kode', $kode)->value('nama');
+
+        return response()->json(['nama' => $nama]);
+    }
 }
