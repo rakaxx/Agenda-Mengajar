@@ -99,10 +99,6 @@ class AkunController extends Controller
     {
         $model = User::find($id);
         $model->delete();
-<<<<<<< HEAD
-        return redirect('admin/akun');
-=======
         return redirect('admin/akun')->with('toast_success', 'Data Berhasil Dihapus');;
->>>>>>> 63745d8c70cd44214fce2470e64a0cd6d9a649f3
     }
 }

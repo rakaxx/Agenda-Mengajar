@@ -132,15 +132,9 @@ class AgendaController extends Controller
 
             $model = Agenda::find($id);
             $model->delete();
-<<<<<<< HEAD
-            return redirect('guru/agenda');
-        }elseif (Auth::user()->role == 'admin') {
-            return redirect('admin/agenda');
-=======
             return redirect('guru/draf')->with('toast_success', 'Agenda Berhasil Diisi');;
         }elseif (Auth::user()->role == 'admin') {
             return redirect('admin/agenda')->with('toast_success', 'Agenda Berhasil Diubah');
->>>>>>> 63745d8c70cd44214fce2470e64a0cd6d9a649f3
         }elseif (Auth::user()->role == 'kepalasekolah') {
             return redirect('kepsek/agenda');
         } 
@@ -156,10 +150,6 @@ class AgendaController extends Controller
     {
         $model = Agenda::find($id);
         $model->delete();
-<<<<<<< HEAD
-        return redirect('admin/agenda');
-=======
         return redirect('admin/agenda')->with('toast_success', 'Agenda Berhasil Dihapus');;
->>>>>>> 63745d8c70cd44214fce2470e64a0cd6d9a649f3
     }
 }
