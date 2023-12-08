@@ -56,11 +56,7 @@
                                         <div class="row">
                                             <div class="col-4">
                                                 <label>NIDN</label>
-<<<<<<< HEAD
                                                 <select class="custom-select" name="nidn" id="nidn" required>
-=======
-                                                <select class="custom-select" name="nidn" required>
->>>>>>> 63745d8c70cd44214fce2470e64a0cd6d9a649f3
                                                     <option value="">-- Pilih NIDN --</option>
                                                     @foreach ($takun as $key => $value)
                                                         <option value="{{ $value->nidn }}">{{ $value->nidn }}</option>
@@ -69,12 +65,7 @@
                                             </div>
                                             <div class="col-8">
                                                 <label>Nama</label>
-<<<<<<< HEAD
                                                 <input type="text" class="form-control" name="nama" id="nama" readonly>
-=======
-                                                <input type="text" class="form-control" name="nama"
-                                                    placeholder="Masukkan Nama" required>
->>>>>>> 63745d8c70cd44214fce2470e64a0cd6d9a649f3
                                             </div>
                                         </div>
                                     </div>
@@ -82,11 +73,7 @@
                                         <div class="row">
                                             <div class="col-2">
                                                 <label>Mata Pelajaran</label>
-<<<<<<< HEAD
                                                 <select class="custom-select" name="kode_mapel" id="kode_mapel" required>
-=======
-                                                <select class="custom-select" name="kode_mapel" required>
->>>>>>> 63745d8c70cd44214fce2470e64a0cd6d9a649f3
                                                     <option value="">-- Kode --</option>
                                                     @foreach ($tmapel as $key => $value)
                                                         <option value="{{ $value->kode }}">{{ $value->kode }}</option>

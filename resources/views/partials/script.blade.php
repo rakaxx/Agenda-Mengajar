@@ -28,11 +28,9 @@
 <script src="{{ asset('template/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js') }}"></script>
 <!-- AdminLTE App -->
 <script src="{{ asset('template/dist/js/adminlte.js') }}"></script>
-<<<<<<< HEAD
 <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
 {{-- <script src="{{ asset('template/dist/js/pages/dashboard.js') }}"></script> --}}
  
-=======
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js" integrity="sha512-VEd+nq25CkR676O+pLBnDW09R7VQX9Mdiij052gVCp5yVH3jGtH70Ho/UUv4mJDsEdTvqRCFZg0NKGiojGnUCw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
@@ -52,4 +50,3 @@
         }
     }
 </script> --}}
->>>>>>> 63745d8c70cd44214fce2470e64a0cd6d9a649f3
